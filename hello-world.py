@@ -1,5 +1,4 @@
 import os
 
-for name, value in os.environ.items():
-    print(f"{name}: {value}")
+print(os.environ[MY_TEST_SECRE])
 print("Hello, World!")
