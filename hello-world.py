@@ -1,4 +1,5 @@
 import os
 
-print(os.environ[MY_TEST_SECRET])
+print(os.getenv("MY_TEST_SECRET", "Not Found"))
 print("Hello, World!")
+
