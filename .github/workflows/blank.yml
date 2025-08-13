@@ -13,12 +13,16 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+          MY_TEST_SECRET: ${{ secrets.MY_TEST_SECRET }}
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -40,5 +44,4 @@ jobs:
         run: |
           echo "Doing something with the secret..."
           echo "API Key: $MY_TEST_SECRET" # This will be masked in logs
-        env:
-          API_KEY: ${{ secrets.MY_TEST_SECRET }}
+
