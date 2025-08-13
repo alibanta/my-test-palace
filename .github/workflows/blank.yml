@@ -33,5 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          python --version
+          python hello-world.py
           echo test, and deploy your project.
